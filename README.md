@@ -4,6 +4,8 @@ Terminal-based vjing/livecoding program
 ## About
 ANSIedad uses bytebeat expressions to generate visuals through the terminal. Please note that this is in a very primitive state of developing so you need some knowledge in order to make it work on your system.
 
+![](sreenshots/classic.jpg)
+
 ## Requirements
 * Python (tested on 2.7.17)
 * Terminal (tested on Xfce 0.8.7.4)
