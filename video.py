@@ -25,11 +25,8 @@ while True:
 
 	try:
 		CHAR = chr(eval(EXPR)%64+32)			# set character
-
-# these escape codes work on xfce4-terminal 0.8.7.4, you'll probably need to replace ':' for ';'
-
-		ESCAPE="\x1b[48:5:%dm" % (eval(EXPR)%256)	# set escape code for 8-bit bg color
-#		ESCAPE="\x1b[38:5:%dm" % (eval(EXPR)%256)	# set escape code for 8-big fg color
+		ESCAPE="\x1b[48;5;%dm" % (eval(EXPR)%256)	# set escape code for 8-bit bg color
+#		ESCAPE="\x1b[38;5;%dm" % (eval(EXPR)%256)	# set escape code for 8-big fg color
 
 	except:
 		pass

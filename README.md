@@ -15,7 +15,7 @@ ANSIedad uses bytebeat expressions to generate visuals through the terminal. Ple
 * Text editor
 
 ## Run
-Run `python video.py` on your terminal. If it doesn't work change the escape codes in *video.py*, you'll probably need to replace `:` with `;`. The code is pretty documented.
+Run `python video.py` on your terminal. The code is pretty documented in case you want to change something.
 ### Setup
 You can set the width and other things at the begining of *video.py*. Notice that you have the possibility of working with characters and front color too, just comment or uncomment the proper lines in the code.
 ### Usage
