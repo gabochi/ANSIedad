@@ -4,7 +4,7 @@ Terminal-based vjing/livecoding program
 ## About
 ANSIedad uses bytebeat expressions to generate visuals through the terminal. Please note that this is in a very primitive state of developing so you need some knowledge in order to make it work on your system.
 
-![](https://raw.githubusercontent.com/gabochi/ANSIedad/master/screenshots/odiseo2.jpg?raw=true){: height="36px" width="36px"}
+<img src="https://raw.githubusercontent.com/gabochi/ANSIedad/master/screenshots/odiseo2.jpg?raw=true" height="250" width="250">
 
 ## Requirements
 * Python (tested on 2.7.17)
