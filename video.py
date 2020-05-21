@@ -24,7 +24,7 @@ while True:
 	t+=1	# increase time in 1
 
 	try:
-#		CHAR = chr(eval(EXPR)%64+32)			# set character
+		CHAR = chr(eval(EXPR)%64+32)			# set character
 
 # these escape codes work on xfce4-terminal 0.8.7.4, you'll probably need to replace ':' for ';'
 
@@ -37,5 +37,5 @@ while True:
 	if t%WIDTH==0: print("")	# CR
 
 	sys.stdout.write(ESCAPE)	# print escape code
-	sys.stdout.write(" ")		# print blank space
-#	sys.stdout.write(CHAR)		# print character
+#	sys.stdout.write(" ")		# print blank space
+	sys.stdout.write(CHAR)		# print character
