@@ -1,0 +1,5 @@
+((t>>4)*t>>10) & (2**((t>>16)%8))
+7
+63
+
+# i guess this could be easier... the 63 really helps

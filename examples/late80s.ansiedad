@@ -1,0 +1,5 @@
+((t%255&t*2)>>3+(t>>(t>>16)%16)%4) * (t%128<64)
+237+(t>>2)%16
+4
+
+# this is a very conceptual piece, should be at some gallery

@@ -1,0 +1,5 @@
+t%128+(t>>14)%2*128
+t
+(t>>10)
+
+# uno dos tres probando

@@ -6,24 +6,21 @@
 from os.path import getmtime
 import sys
 
-# setup width and expressions source file
-WIDTH = 128
-EXPR_FILE = "file.exp"
+				# setup width and expressions source file from arguments
+WIDTH = int(sys.argv[1])
+EXPR_FILE = sys.argv[2]
 
-# init other variables
+				# init other variables
 BG_EXPR = " "
 FG_EXPR = " "
 CH_EXPR = " "
 MOD_TIME = 0
 
-# init bytebeat counter
-t = 0
+t = 0 				# init bytebeat counter
 
-# define update expressions function
-def updateExpressions():
+def updateExpressions():	# define update expressions function
 
-	global EXPR_FILE, BG_EXPR, FG_EXPR, CH_EXPR, MOD_TIME
-	# dont do that at home
+	global EXPR_FILE, BG_EXPR, FG_EXPR, CH_EXPR, MOD_TIME	# dont do this at home
 
 	with open(EXPR_FILE,"r") as FILE:
 		BG_EXPR = FILE.readline()
@@ -36,28 +33,20 @@ updateExpressions()
 
 while True:
 
-	# update expressions if the file change
-	if getmtime(EXPR_FILE) != MOD_TIME: updateExpressions()
+	if getmtime(EXPR_FILE) != MOD_TIME: updateExpressions() # update expressions if the file change
 
-	t=t+1
+	t+=1							# increase bytebeat counter
 
 	try:
-		CH = chr(eval(CH_EXPR)%94+32)
-		# set character
-		BG = "\x1b[48;5;%dm" % (eval(BG_EXPR)%256)
-		# set escape code for 8-bit bg color
-		FG = "\x1b[38;5;%dm" % (eval(FG_EXPR)%256)
-		# set escape code for 8-big fg color
+		CH = chr(eval(CH_EXPR)%94+32)			# set character
+		BG = "\x1b[48;5;%dm" % (eval(BG_EXPR)%256)	# set escape code for 8-bit bg color
+		FG = "\x1b[38;5;%dm" % (eval(FG_EXPR)%256)	# set escape code for 8-big fg color
 
 	except:
 		pass
 
-	# carriage return
-	if t%WIDTH==0: print("")
+	if t%WIDTH==0: print("")				# carriage return
 
-	# print bg escape code
-	sys.stdout.write(BG)
-	# print fg escape code
-	sys.stdout.write(FG)
-	# print character
-	sys.stdout.write(CH)
+	sys.stdout.write(BG)					# print bg escape code
+	sys.stdout.write(FG)					# print fg escape code
+	sys.stdout.write(CH)					# print character

@@ -1,0 +1,5 @@
+(t>>4)*t>>(t>>14)%14&(t>>15)*112	#curvapuzzle
+15
+63
+
+# i like curves

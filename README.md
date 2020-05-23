@@ -2,25 +2,34 @@
 Terminal-based vjing/livecoding program
 
 ## About
-ANSIedad uses bytebeat expressions to generate visuals through the terminal. Please note that this is in a very primitive state of developing so you need some knowledge in order to make it work on your system.
+ANSIedad uses bytebeat expressions to generate visuals through the terminal.
 
 <img src="https://raw.githubusercontent.com/gabochi/ANSIedad/master/screenshots/loom.png?raw=true">
 
 ## Requirements
 * Python (tested on 2.7.17 and 3.6.9)
-* Terminal (tested on *Xfce* and *Xterm*)
-* Text editor (tested on *nano*)
+* Terminal emulator (so far it worked on most, Linux and Windows, *not cmd.exe*)
+* Text editor
 
-## Run
-Run `python video.py` on your terminal. The code is pretty documented in case you want to change something.
-### Setup
-You can set the width (*128* default) and the expressions source file (*file.exp* default) at the begining of *video.py*.
-### Usage
-The program reads modifications in the expressions source file and updates the visuals accordingly, so the output should change everytime you save the file. There are some bytebeat expression examples in *video.txt* you can copy and paste. *There is also a hidden message for the chosen one*.
-### Eval
-The expression source file lines are evaluated as follows:
-```
-background color expression
-foreground color expression
-character number expression
-```
+## Install
+Clone or download this repo. Open your terminal and try this command:
+
+`python video.py 128 examples/test.ansiedad`
+
+That should work.
+
+## Usage
+The first argument of the program (`128`) is the width. The second (`examples/test.ansiedad`) is the source file that the program will evaluate to generate the visuals. The visuals will update accordingly if the file is modified.
+
+## Examples
+Mess with the examples and don't worry, there is a backup of them in the *backup* folder.
+
+## Bytebeat
+ANSIedad uses bytebeat expressions. Lines of the source file are evaluated as follows:
+
+line|evaluated as...
+---|---
+1|background color
+2|foreground color
+3|character number
+

@@ -1,0 +1,5 @@
+(t*(t>>(t>>0)%128)&1) * (t%128)
+0
+0
+
+# do you still play frogger?

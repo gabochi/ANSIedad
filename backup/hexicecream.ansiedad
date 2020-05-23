@@ -1,0 +1,6 @@
+0x3CD>>(t>>4)%4
+0
+0
+
+# a hex color sequence, not very accurate
+(0x3CD>>(t>>4)%4)
