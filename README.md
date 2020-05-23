@@ -4,7 +4,7 @@ Terminal-based vjing/livecoding program
 ## About
 ANSIedad uses bytebeat expressions to generate visuals through the terminal.
 
-<img src="https://raw.githubusercontent.com/gabochi/ANSIedad/master/screenshots/loom.png?raw=true">
+<img src="https://raw.githubusercontent.com/gabochi/ANSIedad/master/screenshots/mux.png?raw=true">
 
 ## Requirements
 * Python (tested on 2.7.17 and 3.6.9)
@@ -33,3 +33,11 @@ line|evaluated as...
 2|foreground color
 3|character number
 
+## tmux
+There is a simple *mux.sh* script file just to give you some ideas, improove it, customize, make your own script according to your system and preferences and share!
+
+`tmux new-session python video.py 128 examples/awesome.ansiedad \; split-window -h python video.py 128 examples/odiseo.ansiedad \; split-window nano examples/awesome.ansiedad \; split-window nano examples/odiseo.ansiedad`
+
+---
+
+Thanks for trying ANSIedad, I'll upload more documentation soon.
