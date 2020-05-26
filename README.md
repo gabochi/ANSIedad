@@ -30,11 +30,13 @@ There are many examples in */examples*, don't hesitate to experiment with them s
 
 Bytebeat takes *time* (`t`) as a variable and apply basic logic and math in a single expression to generate an aesthetic output. You must know that a *byte* is 'made of' *8 bits*, eight binary digits, each one being 0 or 1:
 
-`0000 0000` This is a byte,
-`1001 1101` here's another.
-`0000 0001` This equals decimal ONE
-`0000 0010` decimal TWO
-`0000 0011` THREE
+```
+0000 0000 => This is a byte
+1001 1101 => here's another
+0000 0001 => This equals to decimal ONE
+0000 0010 => this is decimal TWO
+0000 0011 => decimal THREE
+```
 
 You're ready!
 
