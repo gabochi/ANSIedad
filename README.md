@@ -132,6 +132,11 @@ Note that *OR will return 1 in any case but the zero/zero case*.
 *Exercise: put all this together and take a look at the examples!*
 
 ```
+t<<1 | t>>5
+t>>1 ^ t<<6
+t<<1 ^ t>>4
+t<<3 ^ t>>1
+(t<<3 ^ t>>2) & 1000
 ( t<<7 ) % 257 | 2020 - (t<<3) %36
 ( t>>6 & 68 ) *t **3 + (t>>9)
 ( t*(t>>9) | 191 ) * (t>>16)
