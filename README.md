@@ -16,7 +16,12 @@ The program takes a source file with bytebeat expressions to generate the visual
 
 `python video.py 128 new.ansiedad`
 
-This runs the program with *new.ansiedad* as source file in 128 *width*. Width is the length of the string before the carriage return, this will crucially affect the output and the speed. For optimal results try, of course, powers of two: 64, 128, 256, 512, etc. Lines in the source file are evaluated as follows:
+This runs the program with *new.ansiedad* as source file in 128 *width*. Width is the length of the string before the carriage return, this will crucially affect the output and the speed. For optimal results try powers of two: 64, 128, 256, 512, etc. There is an optional third argument to specify a *delay* time per line in seconds (default is zero):
+
+`python video.py 128 new.ansiedad 0.05`
+This will delay the following line output 50 milliseconds.
+
+Lines in the source file are evaluated as follows:
 
 line|evaluated as...
 ---|---
@@ -33,10 +38,10 @@ There are many examples in */examples*, don't hesitate to experiment with them s
 Bytebeat takes *time* (`t`) as a variable and apply basic logic and math in a single expression to generate an aesthetic output. You must know that a *byte* is 'made of' *8 bits*, eight binary digits, each one being 0 or 1:
 
 ```
-0000 0000 => This is a byte
-1001 1101 => here's another
-0000 0001 => This equals to decimal ONE
-0000 0010 => this is decimal TWO
+0000 0000 => a byte
+1001 1101 => another
+0000 0001 => decimal ONE
+0000 0010 => decimal TWO
 0000 0011 => decimal THREE
 ```
 
@@ -48,9 +53,9 @@ You're ready!
 t % 16
 ```
 
-Think of *modulo* (`%`) as a 'looper'. This expression will truncate *time* on the first 16 values. You can try different lenghts and see what happens. In fact, there is an implicit `%256` for the entire expression. Try just `t` and you'll notice that, although *time* keeps growing and values above the byte (`1111 1111` = decimal 255) are not valid, there is no error because the result is always confined to the byte (a decimal 256 result will be truncated to 0, 257 to 1 and so on and so on).
+Think of *modulo* (`%`) as a 'looper'. This expression will truncate *time* on the first 16 values. You can try different lengths and see what happens. In fact, there is an implicit `%256` for the entire expression. Try just `t` and you'll notice that, although *time* keeps growing and values above the byte (`1111 1111` = decimal 255) are not valid, there is no error because the result is always confined to one byte (a decimal 256 result will be truncated to 0, 257 to 1 and so on and so on).
 
-*Exercise: Combine two or more loops with basic math operators...*
+*Exercise: Combine two or more, add, multiply...*
 
 ```
 t%16 + 240
@@ -77,7 +82,7 @@ Shift moves bits *X* possitions to the right `>>` or left `<<`. This is like div
 
 Practically speaking, shifting will 'accelerate/skip' or 'delay/hold' *time*. There are more advanced uses like *sequencing* but let's keep it simple for now.
 
-*Exercise: Combine with modulo and math...*
+*Exercise: Combine with math...*
 
 ```
 (t<<1) + (t>>10)
@@ -93,14 +98,15 @@ t ^ t+1
 t | 179
 ```
 
-This three basic bitwise operators will spice up your expression. [Here](https://en.wikipedia.org/wiki/Bitwise_operation#Bitwise_operators) you have an exhaustive and very useful explanation with graphic representation. But, for the spirit of computation, let's brief anyway:
+These three basic bitwise operators will spice up your expression. [Here](https://en.wikipedia.org/wiki/Bitwise_operation#Bitwise_operators) you have an exhaustive and very useful explanation with graphic representation. But, for the spirit of computation, let's brief anyway:
 
 ##### **AND** 
 ###### = 1 if *both* compared bits are 1:
 
 1010
-0110
 &
+0110
+=
 0010
 
 `10 & 6 = 2`
@@ -111,8 +117,9 @@ Note that *AND will never give a value above the lower operand*.
 ###### = 1 if *any* of the compared bits is 1:
 
 1010
-0110
 |
+0110
+=
 1110
 
 `10 | 6 = 14`
@@ -123,8 +130,9 @@ Note that *OR will return 1 in any case but the zero/zero case*.
 ###### = 1 when *just one* of the compared bits is 1:
 
 1010
-0110
 ^
+0110
+=
 1100
 
 `10 ^ 6 = 12`
