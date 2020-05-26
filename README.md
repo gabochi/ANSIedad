@@ -103,11 +103,12 @@ These three basic bitwise operators will spice up your expression. [Here](https:
 ##### **AND** 
 ###### = 1 if *both* compared bits are 1:
 
-1010
-&
-0110
-=
-0010
+
+|||
+:---:|:---:
+||1010
+&|0110
+=|0010
 
 `10 & 6 = 2`
 
@@ -116,11 +117,11 @@ Note that *AND will never give a value above the lower operand*.
 ##### **OR**
 ###### = 1 if *any* of the compared bits is 1:
 
-1010
-|
-0110
-=
-1110
+|||
+:---:|:---:
+||1010
+\||0110
+=|1110
 
 `10 | 6 = 14`
 
@@ -129,11 +130,11 @@ Note that *OR will return 1 in any case but the zero/zero case*.
 ##### **XOR**
 ###### = 1 when *just one* of the compared bits is 1:
 
-1010
-^
-0110
-=
-1100
+|||
+:---:|:---:
+||1010
+^|0110
+=|1100
 
 `10 ^ 6 = 12`
 
