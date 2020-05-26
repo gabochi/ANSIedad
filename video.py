@@ -5,8 +5,9 @@
 
 from os.path import getmtime
 import sys
+import time
 
-				# setup width and expressions source file from arguments
+				# setup width and source file from arguments
 WIDTH = int(sys.argv[1])
 EXPR_FILE = sys.argv[2]
 
