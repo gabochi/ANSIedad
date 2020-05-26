@@ -4,6 +4,8 @@ ANSIedad uses bytebeat technique -first developed by [viznut](http://viznut.fi/e
 
 <img src="https://raw.githubusercontent.com/gabochi/ANSIedad/master/screenshots/mux.png?raw=true">
 
+You can try [ansiedad-editor](https://github.com/coolantleak/ansiedad-editor), a web based version made by coolantleak.
+
 ## Install
 
 Clone or download this repo. You'll need, at least, **Python** and a **terminal emulator** to run the program. Although there are many ways in almost any OS to play with it, there are two simple script files (*new.sh* and *mux.sh*) that you can run right away in Linux to get the idea (this assuming you have *tmux* and *nano* also installed). If not, keep reading.
