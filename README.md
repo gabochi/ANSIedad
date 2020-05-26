@@ -32,15 +32,18 @@ Bytebeat takes *time* (`t`) as a variable and apply basic logic and math in a si
 
 `0000 0000` This is a byte,
 `1001 1101` here's another.
-`0000 0001` This = decimal ONE
-`0000 0010` TWO
+`0000 0001` This equals decimal ONE
+`0000 0010` decimal TWO
 `0000 0011` THREE
 
 You're ready!
 
 ### Modulo
 
-`t % 16`
+```
+t % 16
+```
+
 Think of *modulo* (`%`) as a 'looper'. This expression will truncate *time* on the first 16 values. You can try different lenghts and see what happens. In fact, there is an implicit `%256` for the entire expression. Try just `t` and you'll notice that, although *time* keeps growing and values above the byte (`1111 1111` = decimal 255) are not valid, there is no error because the result is always confined to the byte (a decimal 256 result will be truncated to 0, 257 to 1 and so on and so on).
 
 *Exercise: Combine two or more loops with basic math operators...*
@@ -55,8 +58,11 @@ t%255 + t
 
 ### Shifting
 
-`t>>8`
-`t<<2`
+```
+t>>8
+t<<2
+```
+
 Shift moves bits *X* possitions to the right `>>` or left `<<`. This is like dividing or multiplying by powers of two.
 
 |expression|binary|decimal
@@ -77,9 +83,11 @@ Practically speaking, shifting will 'accelerate/skip' or 'delay/hold' *time*. Th
 
 ### Logic
 
-`t & 101`
-`t ^ t+1`
-`t | 179`
+```
+t & 101
+t ^ t+1
+t | 179
+```
 
 This three basic bitwise operators will spice up your expression. [Here](https://en.wikipedia.org/wiki/Bitwise_operation#Bitwise_operators) you have an exhaustive and very useful explanation with graphic representation. But, for the spirit of computation, let's brief anyway:
 
