@@ -12,7 +12,7 @@ Clone or download this repo. You'll need, at least, **Python** and a **terminal 
 
 ## Usage
 
-The program takes a source file with bytebeat expressions to generate the visuals. Any time that the source file is modified (when saving the changes), the output will update accordingly. You must specify *width* and *source file* as arguments when runing the program. This is an example, try this in your terminal:
+The program takes a source file with bytebeat expressions to generate the visuals. Any time that the source file is modified (when saving the changes), the output will update accordingly. You must specify *width* and *source file* as arguments when runing the program. This is an example you can try in your terminal:
 
 `python video.py 128 new.ansiedad`
 
@@ -31,11 +31,11 @@ line|evaluated as...
 
 ## Examples
 
-There are many examples in */examples*, don't hesitate to experiment with them since there are backups in */backup*.
+There are many examples in */examples*, so don't hesitate to experiment with them since there are backups in */backup*.
 
-## ¿What is bytebeat? ¿How can I understand all these rare expressions?
+## What is bytebeat? How can I understand all these rare expressions?
 
-Bytebeat takes *time* (`t`) as a variable and apply basic logic and math in a single expression to generate an aesthetic output. You must know that a *byte* is 'made of' *8 bits*, eight binary digits, each one being 0 or 1:
+Bytebeat takes *time* (`t`) as a variable and applies basic logic and math in a single expression to generate an aesthetic output. You must know that a *byte* is 'made of' *8 bits*, eight binary digits, each one being 0 or 1:
 
 ```
 0000 0000 => a byte
