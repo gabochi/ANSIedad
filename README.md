@@ -19,7 +19,7 @@ The program is `runme.py` and takes `editme.py` as source file for bytebeat expr
 Then, you can edit `editme.py` on your favorite text editor and follow the instructions.
 To change the visual effects and configure the program there are some reserved variables:
 
-Variable|
+Variable|Action
 :---:|:---:
 BG|background color
 CH|character code
