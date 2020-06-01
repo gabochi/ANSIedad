@@ -1,37 +1,36 @@
 # ANSIedad
 
-ANSIedad uses bytebeat technique -first developed by [viznut](http://viznut.fi/en/)- to generate ASCII visuals through a terminal emulator using ANSI escape codes for color. Therefore, the visual effects are similar to [IBNIZ](https://github.com/viznut/IBNIZ) and, in this case, the expressions use *infix* notation by default.
+ANSIedad uses bytebeat technique -first developed by [viznut](http://viznut.fi/en/)- to generate aesthetic visuals through a terminal emulator using ANSI escape codes. Therefore, the visual effects are similar to [IBNIZ](https://github.com/viznut/IBNIZ).
 
-<img src="https://raw.githubusercontent.com/gabochi/ANSIedad/master/screenshots/mux.png?raw=true">
+<img src="https://raw.githubusercontent.com/gabochi/ANSIedad/master/demo.gif?raw=true">
 
 You can try [ansiedad-editor](https://github.com/coolantleak/ansiedad-editor), a web based version made by coolantleak.
 
 ## Install
 
-Clone or download this repo. You'll need, at least, **Python** and a **terminal emulator** to run the program. Although there are many ways in almost any OS to play with it, there are two simple script files (*new.sh* and *mux.sh*) that you can run right away in Linux to get the idea (this assuming you have *tmux* and *nano* also installed). If not, keep reading.
+Clone or download this repo. You'll need, at least, **Python** and a **terminal emulator** to run the program. Although there are many ways in almost any OS to play with it, there is a simple `script.sh` file you can run immediately assuming you are on Linux and have *tmux* and *nano* editor. If not, keep reading...
 
 ## Usage
 
-The program takes a source file with bytebeat expressions to generate the visuals. Any time that the source file is modified (when saving the changes), the output will update accordingly. You must specify *width* and *source file* as arguments when runing the program. This is an example you can try in your terminal:
+The program is `runme.py` and takes `editme.py` as source file for bytebeat expressions. When saving the changes in the source file, the visual output will update accordingly. To start the program run:
 
-`python video.py 128 new.ansiedad`
+`python3 runme.py`
 
-This runs the program with *new.ansiedad* as source file in 128 *width*. Width is the length of the string before the carriage return, this will crucially affect the output and the speed. For optimal results try powers of two: 64, 128, 256, 512, etc. There is an optional third argument to specify a *delay* time per line in seconds (default is zero):
+Then, you can edit `editme.py` on your favorite text editor and follow the instructions.
+To change the visual effects and configure the program there are some reserved variables:
 
-`python video.py 128 new.ansiedad 0.05`
-This will delay the following line output 50 milliseconds.
-
-Lines in the source file are evaluated as follows:
-
-line|evaluated as...
----|---
-1|background color
-2|foreground color
-3|character number
+Variable|
+:---:|:---:
+BG|background color
+CH|character code
+FG|foreground color
+LINES|rows (default 16)
+WIDTH|columns (default 64)
+SLEEP|delay time (default 0)
 
 ## Examples
 
-There are many examples in */examples*, so don't hesitate to experiment with them since there are backups in */backup*.
+There are further instructions and examples in the source file. Experiment freely, there is a backup: `editme.backup`.
 
 ## What is bytebeat? How can I understand all these rare expressions?
 

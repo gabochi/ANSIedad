@@ -1,5 +1,0 @@
-(t<<1|(t>>15)%8+(t>>16))+(t>>6)		#endlesssloom
-0
-(t>>12)%16
-
-# spread your little wings and fly

@@ -1,1 +1,0 @@
-tmux new-session python video.py 128 examples/awesome.ansiedad 0.025 \; split-window -h python video.py 128 examples/odiseo.ansiedad 0.025 \; split-window nano examples/awesome.ansiedad \; split-window nano examples/odiseo.ansiedad
