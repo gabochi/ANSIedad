@@ -1,7 +1,10 @@
 from editme import *
+from unicodes import *
+
 from sys import stdout
 from time import sleep
 from os.path import getmtime
+
 
 SOURCE_FILE = "editme.py"
 
@@ -39,8 +42,8 @@ while True:
 		FG_OUT = "\033[38;5;%dm" % FG_EXPR
 		stdout.write(FG_OUT)
 
-		CH_EXPR = eval(CH)%64+32
-		CH_OUT = chr(CH_EXPR)
+		CH_EXPR = eval(CH)%224
+		CH_OUT = uni[CH_EXPR]
 		stdout.write(CH_OUT)
 
 	except:
