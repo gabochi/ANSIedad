@@ -50,4 +50,7 @@
 #BYE = "ANSIedad...."; BITMAP = 0b0001001101010101000100100101011100000001010101010001001101100010
 #b ="BITMAP >> ((t>>1)+(t>>10))%16 + (t>>7)%4*16 & 1 ^ (t>>9)%2 * t<<2" ; f = "t&1"; c = "(t%512<64)*(ord(BYE[t%12])-32)"
 
-# Remember you can change dimensions (w/l) and mode (m) too... Have fun ;)
+# Remember you can change dimensions (w/l) and mode (m) too...
+# Also, there is an s variable to sleep after each printed line.
+
+# Have fun ;)
