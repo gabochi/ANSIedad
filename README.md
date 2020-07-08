@@ -21,12 +21,13 @@ To change the visual effects and configure the program there are some reserved v
 
 Variable|Action
 :---:|:---:
-BG|background color
-CH|character code
-FG|foreground color
-LINES|rows (default 16)
-WIDTH|columns (default 64)
-SLEEP|delay time (default 0)
+b|background color
+c|character code
+f|foreground color
+l|rows (default 16)
+w|columns (default 64)
+s|delay time (default 0)
+m|mode (default 0)
 
 ## Examples
 
